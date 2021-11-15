@@ -30,7 +30,9 @@ const Home: NextPage = () => {
           <button
             className={styles.card}
             id="go-to-link-2"
-            onClick={() => push("/link-02")}
+            onClick={async () => {
+              await push("/link-02");
+            }}
           >
             <h2>Link 02</h2>
           </button>
