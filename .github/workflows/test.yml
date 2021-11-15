@@ -5,6 +5,7 @@ on:
 
 env:
   NODE_ENV: "test"
+  DEBUG: pw:*
 
 jobs:
   tests:
