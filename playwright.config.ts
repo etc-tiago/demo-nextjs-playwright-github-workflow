@@ -1,8 +1,11 @@
-import { PlaywrightTestConfig } from "@playwright/test";
+import { PlaywrightTestConfig, devices } from "@playwright/test";
+import path from "path";
 
 const config: PlaywrightTestConfig = {
-  testDir: "e2e",
-  timeout: 30000,
+  timeout: 30 * 1000,
+  testDir: path.join(__dirname, "e2e"),
+  retries: 2,
+  outputDir: "test-results/",
   use: {
     browserName: "chromium",
     headless: true,
@@ -18,6 +21,14 @@ const config: PlaywrightTestConfig = {
     port: 3000,
     timeout: 200000,
   },
+  projects: [
+    {
+      name: "Desktop Chrome",
+      use: {
+        ...devices["Desktop Chrome"],
+      },
+    },
+  ],
 };
 
 export default config;
