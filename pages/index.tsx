@@ -34,9 +34,8 @@ const Home: NextPage = () => {
               console.log("button go-to-link-2 clicked");
               router.push("/link-02");
             }}
-            style={{ pointerEvents: "none" }}
           >
-            <h2>Link 02</h2>
+            Link 02
           </button>
         </div>
       </main>
