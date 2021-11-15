@@ -21,7 +21,7 @@ jobs:
       - run: yarn install --no-progress --non-interactive --frozen-lockfile
       - run: npx playwright install --with-deps
 
-      - run: yarn e2e
+      - run: yarn test:e2e
 
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
