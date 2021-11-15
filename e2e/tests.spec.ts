@@ -26,7 +26,7 @@ test("E2E Test", async ({ page }) => {
   });
 
   await test.step("go to page 2 (hook)", async () => {
-    await page.click("#go-to-link-2");
+    await page.dispatchEvent("#go-to-link-2", 'click');
   });
 
   await test.step("check page of link 2", async () => {
