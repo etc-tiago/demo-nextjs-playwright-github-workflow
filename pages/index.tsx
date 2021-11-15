@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
