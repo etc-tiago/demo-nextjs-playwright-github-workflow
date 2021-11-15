@@ -30,6 +30,7 @@ const Home: NextPage = () => {
           <button
             className={styles.card}
             id="go-to-link-2"
+            type="button"
             onClick={() => {
               console.log("button go-to-link-2 clicked");
               push("/link-02");
