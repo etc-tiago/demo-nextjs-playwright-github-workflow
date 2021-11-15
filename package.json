@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "build-start": "yarn build && yarn start",
-    "e2e": "npx playwright test --browser=chromium"
+    "e2e": "npx playwright test"
   },
   "dependencies": {
     "next": "12.0.3",
