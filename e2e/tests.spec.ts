@@ -26,12 +26,35 @@ test("E2E Test", async ({ page }) => {
   });
 
   await test.step("go to page 2 (hook)", async () => {
-    await page.dispatchEvent("#go-to-link-2", 'click');
+    await page.click("#go-to-link-2");
   });
 
   await test.step("check page of link 2", async () => {
     const el = page.locator(`#title`);
     await expect(el).toBeVisible();
     await expect(el).toHaveText("Link 02");
+  });
+});
+
+test("E2E Test With State", async ({ page }) => {
+  await test.step("access the test page", async () => {
+    await page.goto("http://localhost:3000/with-states");
+    const el = page.locator(`#counter-value`);
+    await expect(el).toBeVisible();
+    await expect(el).toHaveText("0");
+  });
+
+  await test.step("increase to 1", async () => {
+    await page.click("#increase-btn");
+    const el = page.locator(`#counter-value`);
+    await expect(el).toBeVisible();
+    await expect(el).toHaveText("1");
+  });
+
+  await test.step("increase to 2", async () => {
+    await page.click("#increase-btn");
+    const el = page.locator(`#counter-value`);
+    await expect(el).toBeVisible();
+    await expect(el).toHaveText("2");
   });
 });
