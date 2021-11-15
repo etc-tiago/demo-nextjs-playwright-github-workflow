@@ -22,12 +22,13 @@ const Home: NextPage = () => {
         <div className={styles.grid}>
           <Link href="/link-01">
             <a className={styles.card} id="go-to-link-1">
-              <h2>Link 01</h2>
+              Link 01
             </a>
           </Link>
         </div>
         <div className={styles.grid}>
           <button
+            className={styles.card}
             id="go-to-link-2"
             type="button"
             onClick={() => {
