@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  const { push } = useRouter();
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <Head>
@@ -28,12 +28,11 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.grid}>
           <button
-            className={styles.card}
             id="go-to-link-2"
             type="button"
             onClick={() => {
               console.log("button go-to-link-2 clicked");
-              push("/link-02");
+              router.push("/link-02");
             }}
           >
             <h2>Link 02</h2>

@@ -25,7 +25,7 @@ test("E2E Test", async ({ page }) => {
     await expect(el).toHaveText("Homepage");
   });
 
-  await test.step("go to page 2 (hooks)", async () => {
+  await test.step("go to page 2 (hook)", async () => {
     await page.click("#go-to-link-2");
   });
 
