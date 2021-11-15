@@ -1,5 +1,7 @@
 # Next.js + Playwright
 
+> Ignore the commits messages, this repo is a test for github ci. See this code on github.com/vercel/next.js/tree/canary/examples/with-playwright
+
 This example shows how to configure Playwright to work with Next.js.
 
 ## Preview
