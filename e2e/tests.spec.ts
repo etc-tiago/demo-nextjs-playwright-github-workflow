@@ -47,6 +47,7 @@ test("E2E Test With State", async ({ page }) => {
   await test.step("increase to 1", async () => {
     await page.click("#increase-btn");
     const el = page.locator(`#counter-value`);
+    await page.waitForTimeout(200);
     await expect(el).toBeVisible();
     await expect(el).toHaveText("1");
   });
