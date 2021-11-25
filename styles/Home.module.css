@@ -118,4 +118,5 @@
     width: 100%;
     flex-direction: column;
   }
+  .container { height: auto; }
 }
