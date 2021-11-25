@@ -30,15 +30,16 @@ const config: PlaywrightTestConfig = {
     // contextOptions: {
     //   ignoreHTTPSErrors: true,
     // },
+    viewport: { width: 1280, height: 720 },
   },
 
-  projects: [
-    {
-      name: "Desktop Chrome",
-      use: {
-        ...devices["Desktop Chrome"],
-      },
-    },
+//   projects: [
+//     {
+//       name: "Desktop Chrome",
+//       use: {
+//         ...devices["Desktop Chrome"],
+//       },
+//     },
     // {
     //   name: 'Desktop Firefox',
     //   use: {
@@ -52,16 +53,16 @@ const config: PlaywrightTestConfig = {
     //   },
     // },
     // Test against mobile viewports.
-    {
-      name: "Mobile Chrome",
-      use: {
-        ...devices["Pixel 5"],
-      },
-    },
-    {
-      name: "Mobile Safari",
-      use: devices["iPhone 12"],
-    },
+//     {
+//       name: "Mobile Chrome",
+//       use: {
+//         ...devices["Pixel 5"],
+//       },
+//     },
+//     {
+//       name: "Mobile Safari",
+//       use: devices["iPhone 12"],
+//     },
   ],
 };
 export default config;
